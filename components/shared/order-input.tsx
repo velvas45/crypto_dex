@@ -20,7 +20,7 @@ const OrderInput = ({ type }: { type: string }) => {
       symbol: coin,
     });
 
-    setCurrSum("");
+    setCurrSum(0);
   };
 
   const validationNumberAndDotInput = (value: string) =>
