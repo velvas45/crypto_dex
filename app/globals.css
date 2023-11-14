@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .table-container {
+    @apply max-h-40 overflow-y-auto scrollbar-thin scrollbar-thumb-sky-400 scrollbar-track-gray-100 border-b border-sky-500;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  .table-container-coin {
+    @apply max-h-[320px] md:max-h-[460px] lg:max-h-[580px] overflow-y-auto scrollbar-thin scrollbar-thumb-sky-400 scrollbar-track-gray-100 border-b border-sky-500;
+  }
+  table {
+    @apply w-full border-collapse table-fixed;
+  }
+
+  th,
+  td {
+    @apply border border-teal-500 p-2 text-center;
+  }
+
+  .table-container-coin th,
+  .table-container-coin td {
+    @apply border-none text-center;
+  }
+
+  .table-container-coin tr {
+    @apply hover:bg-gray-100;
+  }
+
+  th {
+    @apply sticky top-0 bg-teal-300 text-gray-600;
+  }
+
+  tr:last-child {
+    @apply border-b-0;
+  }
 }
