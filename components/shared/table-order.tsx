@@ -38,9 +38,9 @@ const TableOrder = ({ title, type }: Props) => {
             {marketData.length > 0 ? (
               marketData.map((item, idx) => (
                 <tr key={item.idx}>
-                  <td>{item.price}</td>
-                  <td>{item.sumCoin}</td>
-                  <td>{item.sumPrice}</td>
+                  <td>{Number(item.price).toFixed(2)}</td>
+                  <td>{Number(item.sumCoin).toFixed(2)}</td>
+                  <td>{Number(item.sumPrice).toFixed(2)}</td>
                 </tr>
               ))
             ) : (

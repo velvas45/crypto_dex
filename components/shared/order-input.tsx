@@ -19,6 +19,8 @@ const OrderInput = ({ type }: { type: string }) => {
       sumPrice: currPrice,
       symbol: coin,
     });
+
+    setCurrSum("");
   };
 
   const validationNumberAndDotInput = (value: string) =>
